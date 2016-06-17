@@ -8,6 +8,11 @@ def mostrar(M,f,C):
         for c in range(C):
             print(M[f][c],end="   ")
         print()
+def intercambiar(M,c,x,y):
+    for i in range(c):
+      aux=M[x][i]
+      M[x][i]=M[y][i]
+      M[y][i]=aux
 def mostrar(M,f,C):
   for i in range(f):
     for j in range(C):
@@ -72,6 +77,7 @@ f=int(input("cantidad de filas"))
 C=int(input("cantidad de columnas"))
 for i in range(f):
   M.append([0]*C)
+intercambiarM,c,x,y)
 ingresar(M,C,f)
 mostrar(M,C,f)
 if f==C:
@@ -137,3 +143,7 @@ print(sep)
 suma_matrices(M1,M2,M3,filas,columnas)
 print("la suma de las matrices 1 y 2 es : ")
 mostrar(M3,filas,columnas)  
+
+
+
+
