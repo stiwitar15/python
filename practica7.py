@@ -8,7 +8,7 @@ def mostrar(M,f,C):
         for c in range(C):
             print(M[f][c],end="   ")
         print()
-"""def mostrar(M,f,C):
+def mostrar(M,f,C):
   for i in range(f):
     for j in range(C):
           if j==0 or j==C-1 or i==j:
@@ -65,7 +65,7 @@ def diferentes(M,f,C):
           return False
   return True 
   if comparar(M,f,C):
-    print("elementos diferentes")""" 
+    print("elementos diferentes")
     
 M=[]
 f=int(input("cantidad de filas"))
@@ -74,7 +74,66 @@ for i in range(f):
   M.append([0]*C)
 ingresar(M,C,f)
 mostrar(M,C,f)
-"""if f==C:
+if f==C:
   print("suma de la diagonal secundaria", sumaDS(M,C))
 else:
-  print("no existe daigonal secundaria")"""
+  print("no existe daigonal secundaria")
+
+
+
+  """suma de matrices""" 
+
+
+
+
+def ingresar_elem_matrices(M,F,C):
+    for f in range(F):
+        for c in range(C):
+            M[f][c]=int(input("El elemento (%d,%d) es :" % (f+1,c+1)))
+def mostrar(M,F,C):
+    for f in range(F):
+        for c in range(C):
+            print(M[f][c],end="   ")
+        print()
+def suma_matrices(M1,M2,M3,F,C):
+    for f in range(F):
+        for c in range(C):
+            M3[f][c]=M1[f][c]+M2[f][c]
+                            
+filas=int(input("la cantidad  de filas es: "))
+columnas=int(input("la cantidad de columnas es: "))
+sep="*"*80
+print(sep)
+M1=[]
+for e in range(filas):
+    M1.append([0]*columnas)
+    
+M2=[]
+for e in range(filas):
+    M2.append([0]*columnas)
+    
+M3=[]
+for e in range(filas):
+    M3.append([0]*columnas)
+
+print("ingresaremos los elementos de la 1ra matriz ")   
+ingresar_elem_matrices(M1,filas,columnas)
+sep="*"*80
+print(sep)
+print("ingresaremos los elementos de la 2da matriz ")
+ingresar_elem_matrices(M2,filas,columnas)
+sep="*"*80
+print(sep)
+
+print("tu matriz 1 es: ")
+mostrar(M1,filas,columnas)
+sep="*"*80
+print(sep)
+
+print("tu matriz 2 es: ")
+mostrar(M2,filas,columnas)
+sep="*"*80
+print(sep)
+suma_matrices(M1,M2,M3,filas,columnas)
+print("la suma de las matrices 1 y 2 es : ")
+mostrar(M3,filas,columnas)  
