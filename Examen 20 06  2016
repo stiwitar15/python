@@ -22,3 +22,54 @@ n=int(input("repeticiones"))
 print("cadena repetida=",mitadini(cad,n))
 print("cadena final repetida=",mitadfinal(cad,n))
 
+"""Ejercicio numero 2: encontrar la diferencia entre el mayor y menor de cada columna"""
+
+def elemdiagonales(M,f,c):
+	V=[0]*c
+	for i in range(c):
+		may=M[0][i]
+		men=M[0][i]
+		for j in range(1,f):
+			if M[j][i]>may:
+				may=M[j][i]
+			if M[j][i]<men:
+				men=M[j][i]
+		v[i]=may-men
+	mostrarvector(V,c)	
+"""tortuga 3 cuadrados """	
+import turtle
+wn=turtle.Screen
+tess=turtle.Turtle()
+colores=["red","blue","yellow"]
+tess.left(30)
+for i in range(3):
+	tess.left(20)
+	tess.color(colores[i])
+	for j in range(4):
+		tess.forward(60)
+		tess.left(90)
+wn.mainloop()
+wn.exitoneclick()
+
+
+""" silla"""
+def menor(M,i,c):
+	men=M[i][0]
+	for j in range(1,c):
+		if m[i][j]<men:
+			men=M[i][j]
+
+def mayor(M,j,f):
+	may=M[0][j]
+	for i in range(1,f):
+		if m[i][j]>may:
+			may=M[i][j]
+	return may
+
+def puntosilla(M,f,c):
+	for i in range(f):
+		for j in range(c):
+			val=M[i][j]
+			if val==menor(M,i,c) and val==mayor(M,j,f):
+				print("(",i,",",j")"
+		
