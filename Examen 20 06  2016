@@ -1,0 +1,24 @@
+"""Ejercicio numero 1: repetir n veces la mitad inicial,final de una cadena """
+
+def mitadini(cad,n):
+	tam=len(cad)
+	s=""
+	for i in range(n):
+		s=s+cad[:tam//2]
+	return s
+
+def mitadfinal(cad,n):
+	s=""
+	tam=len(cad)
+	for i in range(n):
+		if tam%2==0:
+			s=s+cad[tam//2:]
+		else:
+			s=s+cad[tam//2+1:]
+	return s
+
+cad=input("cadena?")
+n=int(input("repeticiones"))
+print("cadena repetida=",mitadini(cad,n))
+print("cadena final repetida=",mitadfinal(cad,n))
+
